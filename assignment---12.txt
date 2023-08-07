@@ -1,0 +1,42 @@
+1-hey from message1
+1-print the message (hey from message1) in the CLI and save the return in the container spring
+
+2- hey from message1
+   hey from message2
+2- print the message (hey from message1) first becuase getMessage2 have Qualifier(1) then (hey from message2) in the CLI and save the return in the Spring container
+
+
+3-hey from message1
+  hey from message3
+  hey from message2
+  or
+  hey from message3
+  hey from message1
+  hey from message2
+  
+3- print the message (hey from message1 or hey from message3) first becuase getMessage2 have Qualifier(3) so it will print after getMessage3 so getMessage2 will always be the last but getMessage1 or getMessage3 will be random
+
+4-hey from message1
+  hey from Main controller
+  hey from message3
+  hey from message2
+  or
+  hey from message3
+  hey from message2
+  hey from message1
+  hey from Main controller
+
+  
+4- print the message (hey from message1 or hey from message3) first  (hey from Main controller) be the secound if getMessage1 run first   getMessage2 have Qualifier(3) so it will print after getMessage3 so getMessage2 will  be the last or third or second but getMessage1 or getMessage3 will be random bettwen first& secound
+
+
+5-hey from message3
+  hey from message2
+  hey from Main controller
+  hey from message1
+ 
+  
+5- getMessage3 always will be the first becuase it not have a Qualifier getMessage2 will print becuase Qualifier3 return value from getMessage3
+then MainController will print becuase Qualifier2 return value from getMessage2 then getMessage1 will print becuase the parameter is MainController
+
+ 
